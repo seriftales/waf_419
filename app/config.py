@@ -1,10 +1,9 @@
 #Yapılandırma dosyası 
 # Bu dosya, uygulamanın yapılandırma ayarlarını içerir. 
 
-
 import json 
 
-TARGET_SERVER = "http://172.16.102.35"  # ya da prod url
+TARGET_SERVER = "http://127.0.0.1:8000"  # ya da prod url
 PROXY_PORT = 8080
 LOG_PATH = "logs/app2.log" 
 HOST = "0.0.0.0" 

@@ -12,22 +12,20 @@
         "message": "SQL Injection detected: ' OR 1=1 --",
         "target": "ARGS"
       },
-      
       {
-        "pattern" : "select" , 
-        "level" : "high" ,
-        "message" : "SQL Injection detected: select statement",
-        "target" : "ARGS"
+        "pattern": "select",
+        "level": "high",
+        "message": "SQL Injection detected: select statement",
+        "target": "ARGS"
       },
-      
       {
-        "pattern": "select * from",
+        "pattern": "select \\* from",
         "level": "medium",
         "message": "SQL Injection detected: select * from",
         "target": "BODY"
       },
       {
-        "pattern": "sleep(",
+        "pattern": "sleep\\(",
         "level": "medium",
         "message": "SQL Injection detected: sleep() function detected",
         "target": "BODY"
@@ -38,21 +36,11 @@
         "message": "Possible SQL Injection detected: comment syntax '--'",
         "target": "ARGS"
       },
-    
       {
-        "pattern" : "id=1" , 
-        "level" : "high" ,
-        "message" : "SQL Injection detected: id=1",
-        "target" : "ARGS"
-
+        "pattern": "id=1",
+        "level": "high",
+        "message": "SQL Injection detected: id=1",
+        "target": "ARGS"
       }
-  
-      
-    
-    
-    
-    
-    
-    ]
-  }
-
+  ]
+}
