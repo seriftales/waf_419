@@ -6,14 +6,14 @@ Sistem, istemciden gelen HTTP isteklerini karşılar, önceden derlenmiş Regex 
 
 **Bu proje ; reverse proxy mimarisini, asenkron ağ programlamayı ve bazı zafiyetlerin WAF seviyesinde nasıl engellendiğini analiz etmek için tasarlanmıştır.**
 
-## 🚀 Özellikler
+##  Özellikler
 
 * **Yüksek Performans:** JSON formatındaki güvenlik kuralları sistem ayağa kalkarken yalnızca bir kez okunup Regex objelerine derlenir. Bu sayede her istekte dosya okuma darboğazı engellenir.
 * **Zafiyet Koruması:** URL parametreleri ayrıştırılırken, aynı isimle gönderilen birden fazla parametre birleştirilerek taranır. Böylece yükü bölerek WAF'ı atlatma girişimleri engellenir.
 * **Güvenli Payload Ayrıştırma:** Gelen POST/PUT isteklerinin gövdesi taranırken, binary form verilerinin  sistemi çökertmemesi için hatalı karakterler yoksayılarak güvenli bir decode işlemi uygulanır.
 * **Asenkron Yönlendirme:** `aiohttp` sayesinde I/O bloklaması yapılmadan, binlerce istek eşzamanlı olarak hedefe yönlendirilebilir.
 
-## 🛠️ Kurulum ve Çalıştırma
+##  Kurulum ve Çalıştırma
 
 Test ortamını izole etmek için WAF'ın arkasında koruyacağı hedef sunucu ayağa kaldırılmalıdır.
 
@@ -27,7 +27,7 @@ python3 -m http.server 8000
 pip install requirements.txt
 python3 run.py
 ```
-## ⚙️ Test Senaryoları
+##  Test Senaryoları
 
 WAF aktifken üçüncü bir terminalden (veya farklı bir cihazdan) aşağıdaki curl komutlarıyla sistemin tepkilerini ölçebilirsiniz:
 
@@ -66,7 +66,7 @@ Saldırgan ilk parametreye temiz, aynı isimli ikinci parametreye zararlı kod y
 curl -i "http://localhost:8080/profile?id=5&id=sleep(10)"
 ```
 
-## 📁 Dizin Yapısı
+##  Dizin Yapısı
 
 ```text
 WAF419/
