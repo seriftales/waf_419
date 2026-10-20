@@ -22,12 +22,10 @@ Sistem, istemciden gelen HTTP isteklerini karşılar, önceden derlenmiş Regex 
    ```
 2. **Hedef Sunucuyu (Backend) Başlatın:**
 Test ortamını izole etmek için WAF'ın arkasında koruyacağı hedef sunucu ayağa kaldırılmalıdır.Yeni bir terminalde, boş bir dizin içinde hedef sunucuyu 8000 portunda başlatın (config.py dosyasını kontrol edin):
-
 ```bash
 python3 -m http.server 8000
 ```
 3. **Bağımlılıkları Kurun ve WAF'ı Başlatın:**
-4. 
 ```bash
 pip install requirements.txt
 python3 run.py
